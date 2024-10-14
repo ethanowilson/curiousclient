@@ -1,0 +1,109 @@
+# device: "cuda" | "cpu"
+device: cuda
+gpu:
+- 0
+
+# federated learning algorithm, federated model, and simulation settings
+fedalg: "fedavg"
+global_model: "lenet"
+dataset: "ImageNet" # ImageNet, MNIST
+
+randomseed: 0
+
+num_clients: 4 # number of clients in the system
+
+compress: "none"
+
+postprocessor: "compare" # gan, compare, diffusion, none
+
+fed_lr: 0.003
+tau: 3 # local epochs
+
+lr_guess: 0.003 # If attacker does not know the model's learning rate
+
+batch_size: 16 # Client batch size
+rog_lr: 0.1
+
+T_max: 100
+# half: True
+half: False
+sf: 4
+
+train_data_dir: data
+test_data_dir: data
+sample_size:
+- 128
+- 128
+channels: 3
+num_classes: 1000
+
+thres: 2
+dpsnr: -5
+
+
+#------------------------------------
+# Settings for direct postprocessor (diffusion)
+
+data:
+    dataset: "ImageNet"
+    image_size: 256
+    channels: 3
+    logit_transform: false
+    uniform_dequantization: false
+    gaussian_dequantization: false
+    random_flip: false
+    rescaled: true
+    num_workers: 8
+    subset_1k: False
+    out_of_dist: True
+
+model:
+    type: "openai"
+    in_channels: 3
+    out_channels: 3
+    num_channels: 256
+    num_heads: 4
+    num_res_blocks: 2
+    attention_resolutions: "32,16,8"
+    dropout: 0.0
+    resamp_with_conv: True
+    learn_sigma: True
+    use_scale_shift_norm: true
+    use_fp16: true
+    resblock_updown: true
+    num_heads_upsample: -1
+    var_type: 'fixedsmall'
+    num_head_channels: 64
+    image_size: 256
+    class_cond: false
+    use_new_attention_order: false
+
+diffusion:
+    beta_schedule: linear
+    beta_start: 0.0001
+    beta_end: 0.02
+    num_diffusion_timesteps: 1000
+
+sampling:
+    batch_size: 8
+    last_only: True
+
+#------------------------------------
+# Settings for comparison with GAN postprocessor
+joint_postmodel: model_zoos/postmodel.pth
+# optional
+denoiser: model_zoos/denoiser.pth
+usrnet: model_zoos/usrgan.pth
+kernel:  model_zoos/kernels_bicubicx234.mat
+noise_level: 0.01
+
+# tresnet
+refine: False
+# refine: True
+tresnet: model_zoos/tresnet.pth
+
+
+# Log configurations
+output_folder: "experiments"
+printevery: 1
+

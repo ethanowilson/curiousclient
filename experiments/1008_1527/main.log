@@ -1,0 +1,204 @@
+--------------------------------------------------------------------------------
+T_max               : 100
+batch_size          : 16
+channels            : 3
+compress            : none
+data                : {'dataset': 'ImageNet', 'image_size': 256, 'channels': 3, 'logit_transform': False, 'uniform_dequantization': False, 'gaussian_dequantization': False, 'random_flip': False, 'rescaled': True, 'num_workers': 8, 'subset_1k': False, 'out_of_dist': True}
+dataset             : ImageNet
+denoiser            : model_zoos/denoiser.pth
+device              : cuda
+diffusion           : {'beta_schedule': 'linear', 'beta_start': 0.0001, 'beta_end': 0.02, 'num_diffusion_timesteps': 1000}
+dpsnr               : -5
+fed_lr              : 0.003
+fedalg              : fedavg
+global_model        : lenet
+gpu                 : [0]
+half                : False
+joint_postmodel     : model_zoos/postmodel.pth
+kernel              : model_zoos/kernels_bicubicx234.mat
+lr_guess            : 0.003
+model               : {'type': 'openai', 'in_channels': 3, 'out_channels': 3, 'num_channels': 256, 'num_heads': 4, 'num_res_blocks': 2, 'attention_resolutions': '32,16,8', 'dropout': 0.0, 'resamp_with_conv': True, 'learn_sigma': True, 'use_scale_shift_norm': True, 'use_fp16': True, 'resblock_updown': True, 'num_heads_upsample': -1, 'var_type': 'fixedsmall', 'num_head_channels': 64, 'image_size': 256, 'class_cond': False, 'use_new_attention_order': False}
+noise_level         : 0.01
+num_classes         : 1000
+num_clients         : 4
+output_folder       : experiments
+postprocessor       : compare
+printevery          : 1
+randomseed          : 0
+refine              : False
+rog_lr              : 0.1
+sample_size         : [128, 128]
+sampling            : {'batch_size': 8, 'last_only': True}
+sf                  : 4
+tau                 : 3
+test_data_dir       : data
+thres               : 2
+train_data_dir      : data
+tresnet             : model_zoos/tresnet.pth
+usrnet              : model_zoos/usrgan.pth
+iter: 0 loss: 4.7997e+00
+iter: 1 loss: 3.2773e+00
+iter: 2 loss: 2.4898e+00
+iter: 3 loss: 2.2114e+00
+iter: 4 loss: 1.9616e+00
+iter: 5 loss: 1.7829e+00
+iter: 6 loss: 1.7078e+00
+iter: 7 loss: 1.7403e+00
+iter: 8 loss: 1.7400e+00
+iter: 9 loss: 1.6660e+00
+iter: 10 loss: 1.6180e+00
+iter: 11 loss: 1.6017e+00
+iter: 12 loss: 1.5003e+00
+iter: 13 loss: 1.4033e+00
+iter: 14 loss: 1.3194e+00
+iter: 15 loss: 1.2302e+00
+iter: 16 loss: 1.2154e+00
+iter: 17 loss: 1.1852e+00
+iter: 18 loss: 1.2023e+00
+iter: 19 loss: 1.1524e+00
+iter: 20 loss: 1.1316e+00
+iter: 21 loss: 1.0991e+00
+iter: 22 loss: 1.0601e+00
+iter: 23 loss: 9.9524e-01
+iter: 24 loss: 9.8566e-01
+iter: 25 loss: 9.9739e-01
+iter: 26 loss: 9.6392e-01
+iter: 27 loss: 9.4888e-01
+iter: 28 loss: 9.3753e-01
+iter: 29 loss: 9.0487e-01
+iter: 30 loss: 8.7133e-01
+iter: 31 loss: 8.5599e-01
+iter: 32 loss: 8.4441e-01
+iter: 33 loss: 8.3080e-01
+iter: 34 loss: 8.0785e-01
+iter: 35 loss: 7.9786e-01
+iter: 36 loss: 7.8264e-01
+iter: 37 loss: 7.5663e-01
+iter: 38 loss: 7.2480e-01
+iter: 39 loss: 7.0453e-01
+iter: 40 loss: 7.0910e-01
+iter: 41 loss: 7.1697e-01
+iter: 42 loss: 7.1585e-01
+iter: 43 loss: 7.1161e-01
+iter: 44 loss: 7.0146e-01
+iter: 45 loss: 7.0621e-01
+iter: 46 loss: 6.8966e-01
+iter: 47 loss: 6.9588e-01
+iter: 48 loss: 6.8451e-01
+iter: 49 loss: 6.9058e-01
+iter: 50 loss: 6.9033e-01
+iter: 51 loss: 6.8751e-01
+iter: 52 loss: 6.7733e-01
+iter: 53 loss: 6.5135e-01
+iter: 54 loss: 6.4016e-01
+iter: 55 loss: 6.1440e-01
+iter: 56 loss: 6.0752e-01
+iter: 57 loss: 6.0444e-01
+iter: 58 loss: 5.9603e-01
+iter: 59 loss: 5.9893e-01
+iter: 60 loss: 6.0834e-01
+iter: 61 loss: 6.2145e-01
+iter: 62 loss: 6.2631e-01
+iter: 63 loss: 6.2150e-01
+iter: 64 loss: 6.3108e-01
+iter: 65 loss: 6.2709e-01
+iter: 66 loss: 6.1081e-01
+iter: 67 loss: 6.0832e-01
+iter: 68 loss: 6.1102e-01
+iter: 69 loss: 6.0518e-01
+iter: 70 loss: 6.0591e-01
+iter: 71 loss: 6.0202e-01
+iter: 72 loss: 6.1049e-01
+iter: 73 loss: 6.0628e-01
+iter: 74 loss: 6.0416e-01
+iter: 75 loss: 6.0372e-01
+iter: 76 loss: 6.0000e-01
+iter: 77 loss: 6.0566e-01
+iter: 78 loss: 6.0705e-01
+iter: 79 loss: 6.1159e-01
+iter: 80 loss: 6.0228e-01
+iter: 81 loss: 6.1227e-01
+iter: 82 loss: 6.1107e-01
+iter: 83 loss: 6.0888e-01
+iter: 84 loss: 6.0560e-01
+iter: 85 loss: 6.0885e-01
+iter: 86 loss: 5.9655e-01
+iter: 87 loss: 5.9625e-01
+iter: 88 loss: 5.9466e-01
+iter: 89 loss: 5.9460e-01
+iter: 90 loss: 5.9023e-01
+iter: 91 loss: 5.8516e-01
+iter: 92 loss: 5.8391e-01
+iter: 93 loss: 5.8333e-01
+iter: 94 loss: 5.8786e-01
+iter: 95 loss: 5.8112e-01
+iter: 96 loss: 5.8210e-01
+iter: 97 loss: 5.8482e-01
+iter: 98 loss: 5.8620e-01
+iter: 99 loss: 5.8218e-01
+=== Evaluate the performance ====
+0 PSNR: 18.432 SSIM: 0.865 Jaccard 0.000 LPIPS: 0.342
+1 PSNR: 16.158 SSIM: 0.724 Jaccard 0.000 LPIPS: 0.602
+2 PSNR: 24.228 SSIM: 0.950 Jaccard 0.000 LPIPS: 0.255
+3 PSNR: 20.045 SSIM: 0.927 Jaccard 0.000 LPIPS: 0.314
+4 PSNR: 19.444 SSIM: 0.921 Jaccard 0.000 LPIPS: 0.197
+5 PSNR: 21.518 SSIM: 0.897 Jaccard 0.000 LPIPS: 0.371
+6 PSNR: 18.745 SSIM: 0.892 Jaccard 0.000 LPIPS: 0.275
+7 PSNR: 21.378 SSIM: 0.872 Jaccard 0.000 LPIPS: 0.473
+8 PSNR: 23.913 SSIM: 0.978 Jaccard 0.000 LPIPS: 0.217
+9 PSNR: 25.812 SSIM: 0.915 Jaccard 0.000 LPIPS: 0.299
+10 PSNR: 19.055 SSIM: 0.900 Jaccard 0.000 LPIPS: 0.272
+11 PSNR: 24.092 SSIM: 0.953 Jaccard 0.000 LPIPS: 0.314
+12 PSNR: 20.621 SSIM: 0.820 Jaccard 0.000 LPIPS: 0.194
+13 PSNR: 21.917 SSIM: 0.927 Jaccard 0.000 LPIPS: 0.261
+14 PSNR: 18.061 SSIM: 0.940 Jaccard 0.000 LPIPS: 0.201
+15 PSNR: 21.412 SSIM: 0.912 Jaccard 0.000 LPIPS: 0.197
+16 PSNR: 21.722 SSIM: 0.936 Jaccard 0.000 LPIPS: 0.253
+17 PSNR: 19.816 SSIM: 0.947 Jaccard 0.000 LPIPS: 0.203
+18 PSNR: 11.774 SSIM: 0.331 Jaccard 0.000 LPIPS: 0.520
+19 PSNR: 19.367 SSIM: 0.834 Jaccard 0.000 LPIPS: 0.328
+20 PSNR: 17.483 SSIM: 0.829 Jaccard 0.000 LPIPS: 0.516
+21 PSNR: 18.955 SSIM: 0.914 Jaccard 0.000 LPIPS: 0.236
+22 PSNR: 19.592 SSIM: 0.870 Jaccard 0.000 LPIPS: 0.250
+23 PSNR: 18.007 SSIM: 0.822 Jaccard 0.000 LPIPS: 0.363
+24 PSNR: 18.347 SSIM: 0.870 Jaccard 0.000 LPIPS: 0.257
+25 PSNR: 20.991 SSIM: 0.914 Jaccard 0.000 LPIPS: 0.281
+26 PSNR: 18.819 SSIM: 0.902 Jaccard 0.000 LPIPS: 0.264
+27 PSNR: 17.762 SSIM: 0.884 Jaccard 0.000 LPIPS: 0.367
+28 PSNR: 20.972 SSIM: 0.936 Jaccard 0.000 LPIPS: 0.185
+29 PSNR: 20.943 SSIM: 0.856 Jaccard 0.000 LPIPS: 0.378
+30 PSNR: 22.991 SSIM: 0.956 Jaccard 0.000 LPIPS: 0.295
+31 PSNR: 24.659 SSIM: 0.964 Jaccard 0.000 LPIPS: 0.153
+32 PSNR: 11.848 SSIM: 0.230 Jaccard 0.000 LPIPS: 0.351
+33 PSNR: 19.977 SSIM: 0.917 Jaccard 0.000 LPIPS: 0.375
+34 PSNR: 23.563 SSIM: 0.906 Jaccard 0.000 LPIPS: 0.440
+35 PSNR: 19.950 SSIM: 0.770 Jaccard 0.000 LPIPS: 0.365
+36 PSNR: 20.420 SSIM: 0.927 Jaccard 0.000 LPIPS: 0.324
+37 PSNR: 22.248 SSIM: 0.966 Jaccard 0.000 LPIPS: 0.101
+38 PSNR: 19.485 SSIM: 0.925 Jaccard 0.000 LPIPS: 0.296
+39 PSNR: 20.336 SSIM: 0.907 Jaccard 0.000 LPIPS: 0.177
+40 PSNR: 18.699 SSIM: 0.863 Jaccard 0.000 LPIPS: 0.350
+41 PSNR: 22.919 SSIM: 0.907 Jaccard 0.000 LPIPS: 0.280
+42 PSNR: 18.285 SSIM: 0.873 Jaccard 0.000 LPIPS: 0.443
+43 PSNR: 25.712 SSIM: 0.963 Jaccard 0.000 LPIPS: 0.049
+44 PSNR: 20.222 SSIM: 0.900 Jaccard 0.000 LPIPS: 0.316
+45 PSNR: 14.580 SSIM: 0.714 Jaccard 0.000 LPIPS: 0.546
+46 PSNR: 16.016 SSIM: 0.761 Jaccard 0.000 LPIPS: 0.401
+47 PSNR: 20.886 SSIM: 0.929 Jaccard 0.000 LPIPS: 0.220
+48 PSNR: 17.843 SSIM: 0.885 Jaccard 0.000 LPIPS: 0.440
+49 PSNR: 10.874 SSIM: 0.211 Jaccard 0.000 LPIPS: 0.771
+50 PSNR: 18.858 SSIM: 0.848 Jaccard 0.000 LPIPS: 0.363
+51 PSNR: 20.461 SSIM: 0.890 Jaccard 0.000 LPIPS: 0.243
+52 PSNR: 18.631 SSIM: 0.819 Jaccard 0.000 LPIPS: 0.435
+53 PSNR: 20.584 SSIM: 0.897 Jaccard 0.000 LPIPS: 0.519
+54 PSNR: 23.024 SSIM: 0.951 Jaccard 0.000 LPIPS: 0.298
+55 PSNR: 19.942 SSIM: 0.949 Jaccard 0.000 LPIPS: 0.258
+56 PSNR: 11.778 SSIM: 0.257 Jaccard 0.000 LPIPS: 0.619
+57 PSNR: 27.283 SSIM: 0.957 Jaccard 0.000 LPIPS: 0.277
+58 PSNR: 25.420 SSIM: 0.971 Jaccard 0.000 LPIPS: 0.100
+59 PSNR: 17.276 SSIM: 0.856 Jaccard 0.000 LPIPS: 0.468
+60 PSNR: 20.871 SSIM: 0.956 Jaccard 0.000 LPIPS: 0.217
+61 PSNR: 17.800 SSIM: 0.868 Jaccard 0.000 LPIPS: 0.217
+62 PSNR: 18.219 SSIM: 0.818 Jaccard 0.000 LPIPS: 0.469
+63 PSNR: 21.744 SSIM: 0.959 Jaccard 0.000 LPIPS: 0.222
+PSNR: 19.887 SSIM: 0.855 Jaccard 0.000 Lpips 0.322
