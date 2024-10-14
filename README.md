@@ -9,7 +9,7 @@ Federated learning (FL) is a privacy-preserving machine learning framework that 
 
 1. **Clone the repository**:  
    `git clone <repository-link>`  
-   `cd <repository-directory>`  
+   `cd curiousclient`  
 
 2. **Add Pretrained Models**:  
    Download the pretrained models from [this link](<link>) and place them in the `model_zoos/` folder.
