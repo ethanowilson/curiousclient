@@ -45,7 +45,7 @@ The attack configuration can be adjusted by editing the `utils/config.yaml` file
 To apply semantic postprocessing on a sample reconstructed image, run:  
 `python mde_postprocess.py`  
 The postprocessed images will be saved in the following folder:  
-`MDE/mde_reconstructions/`
+`mde_reconstructions`
 
 ### Changing the Target Image
 To change the target image for the semantic postprocessor, modify the image path and class label in `mde_postprocess.py`. Use the [ImageNet class label mapping](https://deeplearning.cms.waikato.ac.nz/user-guide/class-maps/IMAGENET/) to update the label.
