@@ -1,0 +1,10 @@
+diffusers 
+lpips==0.1.4
+numpy 
+opencv-python==4.10.0.84
+pandas 
+timm==1.0.9
+torch==2.4.1
+torchaudio==2.4.1
+torchmetrics==1.4.3
+torchvision==0.19.1
