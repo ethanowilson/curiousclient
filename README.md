@@ -12,7 +12,7 @@ Federated learning (FL) is a privacy-preserving machine learning framework that 
    `cd curiousclient`  
 
 2. **Add Pretrained Models**:  
-   Download the pretrained models from [this link](<link>) and place them in the `model_zoos/` folder.
+   Download the pretrained models from [this link](<https://zenodo.org/records/13937480?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTcyOTAzODg3NywiZXhwIjoxNzM5NTc3NTk5fQ.eyJpZCI6IjBjMTYxMzZmLWVkMTEtNGEzZC1hMzA3LWYxMGJjYzM0MmRmZSIsImRhdGEiOnt9LCJyYW5kb20iOiIyZWNkN2VkYWY2ZGUzMmYwNGU5Y2I2ZWVjMzdlMGMyYyJ9.U1WveoEFw7fjtii1D08kKBZSxMw_F7gV8BJWx2-uDwSpV8ie_hprq1LsjkVjMeUT0afXp4QGOygr3DZnRNR2XA>) and place them in the `model_zoos/` folder.
 
 3. **Download ImageNet Validation Set**:  
    Visit the [ImageNet download page](https://www.image-net.org/download.php) to obtain the validation set. Place the raw images in the `data/val/` folder:
